@@ -1,55 +1,49 @@
-[![PyPI version](https://badge.fury.io/py/template_pypi.svg)](https://badge.fury.io/py/template_pypi)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4284804.svg)](https://doi.org/10.5281/zenodo.4284804)
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/myorg/template_pypi/master?urlpath=lab)
-[![Gitpod - Code Now](https://img.shields.io/badge/Gitpod-code%20now-blue.svg?longCache=true)](https://gitpod.io#https://github.com/myorg/template_pypi)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/myorg/template_pypi.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/myorg/template_pypi/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/myorg/template_pypi.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/myorg/template_pypi/context:python)
-[![template_pypi](https://snyk.io/advisor/python/template_pypi/badge.svg)](https://snyk.io/advisor/python/template_pypi)
+[![PyPI version](https://badge.fury.io/py/keras-multilabel-embedding.svg)](https://badge.fury.io/py/keras-multilabel-embedding)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/context:python)
+[![keras-multilabel-embedding](https://snyk.io/advisor/python/keras-multilabel-embedding/badge.svg)](https://snyk.io/advisor/python/keras-multilabel-embedding)
 
-# template_pypi
+# keras-multilabel-embedding
+The package contains a TensorFlow2/Keras class to train an Embedding matrix for multi-label inputs, i.e. instead of 1 ID per token (one hot encoding), N IDs per token can be provided as model input.
 
-## DELETE THIS LATER 
-Download template_pypi and rename it
 
-```
-git clone git@github.com:kmedian/template_pypi.git mycoolpkg
-cd mycoolpkg
-bash rename.sh "myorg" "mycoolpkg" "Real Name"
-```
-
-Reinitialize the repo:
-
-```
-rm -rf .git
-git init
-git remote add origin git@github.com:myorg/mycoolpkg.git
-```
-
+An PyTorch implementation can be found here:
+https://github.com/ulf1/torch-multilabel-embedding
+(`pip install torch-multilabel-embedding`)
 
 ## Usage
 
-Table of Contents
+```py
+import keras_multilabel_embedding as tml
+import tensorflow as tf
 
-* [Use Case 1](#use-case-1)
+# a sequence of multi-label data points
+x_ids = [[1, 2, 4], [0, 1, 2], [2, 1, 4], [3, 2, 1]]
+x_ids = tf.constant(x_ids)
 
+# initialize layer
+layer = tml.MultiLabelEmbedding(
+    vocab_size=5, embed_size=300, random_state=42)
 
-### Use Case 1
+# predict
+y = layer(x_ids)
+```
 
 
 ## Appendix
 
 ### Installation
-The `template_pypi` [git repo](http://github.com/myorg/template_pypi) is available as [PyPi package](https://pypi.org/project/template_pypi)
+The `keras-multilabel-embedding` [git repo](http://github.com/ulf1/keras-multilabel-embedding) is available as [PyPi package](https://pypi.org/project/keras-multilabel-embedding)
 
 ```sh
-pip install template_pypi
-pip install git+ssh://git@github.com/myorg/template_pypi.git
+pip install keras-multilabel-embedding
+pip install git+ssh://git@github.com/ulf1/keras-multilabel-embedding.git
 ```
 
 ### Install a virtual environment
 
 ```sh
-python3.6 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir
@@ -84,8 +78,8 @@ rm -r .venv
 
 
 ### Support
-Please [open an issue](https://github.com/myorg/template_pypi/issues/new) for support.
+Please [open an issue](https://github.com/ulf1/keras-multilabel-embedding/issues/new) for support.
 
 
 ### Contributing
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/myorg/template_pypi/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/ulf1/keras-multilabel-embedding/compare/).
