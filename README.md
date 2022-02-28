@@ -13,6 +13,7 @@ https://github.com/ulf1/torch-multilabel-embedding
 
 ## Usage
 
+### Multi-label embeddings with fixed number of labels
 ```py
 import keras_multilabel_embedding as tml
 import tensorflow as tf
@@ -20,6 +21,23 @@ import tensorflow as tf
 # a sequence of multi-label data points
 x_ids = [[1, 2, 4], [0, 1, 2], [2, 1, 4], [3, 2, 1]]
 x_ids = tf.constant(x_ids)
+
+# initialize layer
+layer = tml.MultiLabelEmbedding(
+    vocab_size=5, embed_size=300, random_state=42)
+
+# predict
+y = layer(x_ids)
+```
+
+### Multi-label embeddings with variable number of labels
+
+```py
+import keras_multilabel_embedding as tml
+import tensorflow as tf
+
+# a sequence of multi-label data points
+x_ids = [[1, 2, 4], [0, 1, 2], [2, 1], [3]]
 
 # initialize layer
 layer = tml.MultiLabelEmbedding(
