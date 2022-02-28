@@ -33,7 +33,7 @@ class MultiLabelEmbedding2(tf.keras.layers.Layer):
         self.constraint = tf.keras.constraints.get(constraint)
         # initialize layer weights
         if random_state:
-            tf.keras.utils.set_random_seed(random_state)
+            tf.random.set_seed(random_state)
 
     def build(self, input_shape=None):
         self.emb = self.add_weight(
