@@ -1,4 +1,4 @@
-import tensorflow as tf 
+import tensorflow as tf
 from .fixednumlabels import parse_args_initializer
 from typing import Union
 
@@ -8,7 +8,7 @@ class MultiLabelEmbedding2(tf.keras.layers.Layer):
 
     Example:
     --------
-    inputs = [[1, 2, 4], [0, 1, 2], [2, 1], [3]] 
+    inputs = [[1, 2, 4], [0, 1, 2], [2, 1], [3]]
     layer = MultiLabelEmbedding2(
         vocab_size=500000, embed_size=300, random_state=42,
         initializer=tf.keras.initializers.VarianceScaling(seed=42))

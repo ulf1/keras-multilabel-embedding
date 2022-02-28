@@ -13,11 +13,11 @@ def test1():
     y1 = layer1(x_ids)
     # the linear layer
     x_ids = [[0., 1, 1, 0, 1], [1, 1, 1, 0, 0],
-                [0, 1, 1, 0, 1], [0, 1, 1, 1, 0]]
+             [0, 1, 1, 0, 1], [0, 1, 1, 1, 0]]
     x_ids = tf.constant(x_ids)
     layer2 = tf.keras.layers.Dense(300, use_bias=False)
     layer2.build(input_shape=(None, 5))
-    layer2.set_weights(layer1.get_weights()) 
+    layer2.set_weights(layer1.get_weights())
     y2 = layer2(x_ids)
     # compare
     tf.debugging.assert_near(y1, y2)

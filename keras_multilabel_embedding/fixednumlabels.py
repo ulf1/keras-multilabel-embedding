@@ -1,4 +1,4 @@
-import tensorflow as tf 
+import tensorflow as tf
 from typing import List, Union
 
 
