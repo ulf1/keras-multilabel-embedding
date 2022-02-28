@@ -1,5 +1,5 @@
 import tensorflow as tf
-from typing import List, Union
+from typing import Union
 
 
 def parse_args_initializer(initializer: Union[str, float, list]
