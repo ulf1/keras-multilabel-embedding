@@ -1,7 +1,6 @@
 [![PyPI version](https://badge.fury.io/py/keras-multilabel-embedding.svg)](https://badge.fury.io/py/keras-multilabel-embedding)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/context:python)
-[![keras-multilabel-embedding](https://snyk.io/advisor/python/keras-multilabel-embedding/badge.svg)](https://snyk.io/advisor/python/keras-multilabel-embedding)
 
 # keras-multilabel-embedding
 The package contains a TensorFlow2/Keras class to train an Embedding matrix for multi-label inputs, i.e. instead of 1 ID per token (one hot encoding), N IDs per token can be provided as model input.
