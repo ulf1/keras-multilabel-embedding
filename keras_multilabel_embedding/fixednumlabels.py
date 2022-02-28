@@ -16,6 +16,16 @@ def parse_args_initializer(initializer: Union[str, float, list]
 
 
 class MultiLabelEmbedding(tf.keras.layers.Layer):
+    """ Multi-label embedding for a fixed number of labels per data point
+
+    Examples:
+    ---------
+    inputs = [[1, 2, 4], [0, 1, 2], [2, 1, 4], [3, 2, 1]]
+    inputs = tf.constant(inputs)
+    layer = MultiLabelEmbedding(
+        vocab_size=500000, embed_size=300, random_state=42)
+    y = layer(inputs)
+    """
     def __init__(self,
                  vocab_size: int = None,
                  embed_size: int = None,
