@@ -31,7 +31,7 @@ setuptools.setup(
     license='Apache License 2.0',
     packages=['keras_multilabel_embedding'],
     install_requires=[
-        'tensorflow>=2.8.0,<3'
+        'tensorflow>=2.6.2,<3'
     ],
     python_requires='>=3.6',
     zip_safe=True

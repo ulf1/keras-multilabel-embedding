@@ -1,2 +1,2 @@
 # public packages (see setup.py)
-tensorflow>=2.8.0,<3
+tensorflow>=2.6.2,<3
