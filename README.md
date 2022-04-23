@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/keras-multilabel-embedding.svg)](https://badge.fury.io/py/keras-multilabel-embedding)
+[![PyPi downloads](https://img.shields.io/pypi/dm/keras-multilabel-embedding)](https://img.shields.io/pypi/dm/keras-multilabel-embedding)
 [![DOI](https://zenodo.org/badge/464098295.svg)](https://zenodo.org/badge/latestdoi/464098295)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/ulf1/keras-multilabel-embedding.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/keras-multilabel-embedding/context:python)
